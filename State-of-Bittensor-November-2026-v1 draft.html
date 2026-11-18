@@ -878,11 +878,10 @@ p.tsrc,p.tcapt{font-size:14px;color:var(--k-ink-2)}
 #year-2026 .ynode p{font-size:14px;line-height:1.4;color:var(--k-ink-2)}
 #year-2026 .yn-name{font-size:16px}
 #year-2026 .ynode.hi{cursor:help}
-#year-2026 .ynode{transition:opacity .2s}
-#year-2026:has(.ynode:focus-visible) .ynode:not(:focus-visible){opacity:.5}
+#year-2026 .ynode{border-radius:6px;transition:background-color .2s}
 @media (hover:hover){
-  #year-2026:has(.ynode:hover) .ynode:not(:hover){opacity:.5}
-  #year-2026 .ynode:hover{opacity:1}
+  #year-2026 .ynode:hover{background-color:color-mix(in srgb,var(--k-accent) 16%,var(--k-bg))}
+  #year-2026 .ynode:hover .yn-name{color:var(--k-accent)}
 }
 @media (prefers-reduced-motion:reduce){#year-2026 .ynode{transition:none}}
 </style>
