@@ -878,13 +878,11 @@ p.tsrc,p.tcapt{font-size:14px;color:var(--k-ink-2)}
 #year-2026 .ynode p{font-size:14px;line-height:1.4;color:var(--k-ink-2)}
 #year-2026 .yn-name{font-size:16px}
 #year-2026 .ynode.hi{cursor:help}
-#year-2026 .ynode{border-radius:6px;transition:opacity .2s,background-color .2s}
-#year-2026 .ynode:focus-visible{outline:2px solid var(--k-accent);outline-offset:3px}
-#year-2026 .ynode:focus-visible::before{box-shadow:0 0 0 3px var(--k-accent),0 0 14px var(--k-accent)}
+#year-2026 .ynode{transition:opacity .2s}
+#year-2026:has(.ynode:focus-visible) .ynode:not(:focus-visible){opacity:.5}
 @media (hover:hover){
-  #year-2026:has(.ynode:hover) .ynode:not(:hover){opacity:.55}
-  #year-2026 .ynode:hover{outline:1px solid var(--k-accent);outline-offset:3px}
-  #year-2026 .ynode:hover::before{box-shadow:0 0 0 3px var(--k-accent),0 0 14px var(--k-accent)}
+  #year-2026:has(.ynode:hover) .ynode:not(:hover){opacity:.5}
+  #year-2026 .ynode:hover{opacity:1}
 }
 @media (prefers-reduced-motion:reduce){#year-2026 .ynode{transition:none}}
 </style>
